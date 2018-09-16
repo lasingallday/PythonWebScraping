@@ -8,7 +8,6 @@ from addedModule.views import addedModule
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
-    url(r'^about', views.about),
     url(r'', addedModule)
 
 ]
