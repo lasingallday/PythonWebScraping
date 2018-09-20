@@ -38,7 +38,6 @@ class FetchAPI extends React.Component {
     return (
         <div className="container2">
             <div className="container1">
-
                     {this.state.data.map(function(dog, index) {
                       return (
                         <div key={index}>
@@ -54,8 +53,6 @@ class FetchAPI extends React.Component {
                         </div>
                       )
                     })}
-   
-
             </div>
         </div>
     );
