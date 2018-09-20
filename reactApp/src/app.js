@@ -38,9 +38,10 @@ class FetchAPI extends React.Component {
     return (
         <div className="container2">
             <div className="container1">
-                {
-                    this.state.data.map(dog => 
-                        <div key={dog.image}>
+
+                    {this.state.data.map(function(dog, index) {
+                      return (
+                        <div key={index}>
                             <h1>{dog.Name}</h1>
                             <img src={dog.image} />
                             <p><b>Age: </b> {dog['age:']}</p>
@@ -51,8 +52,10 @@ class FetchAPI extends React.Component {
                             <br />
                             <hr />
                         </div>
-                    )
-                }
+                      )
+                    })}
+   
+
             </div>
         </div>
     );
