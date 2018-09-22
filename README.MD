@@ -62,6 +62,11 @@ lite-server public
 ## Open in browser:
 Will load page on 127.0.0.1/8080
 
+## Repo Branch explaination:
+production-staging is the main branch for creating pr's.
+production is the main branch we will sync with production-staging and deploy
+master is the repo to be used only for getting started with a basic project template.
+
 
 
 
