@@ -10,7 +10,10 @@ class App extends React.Component {
     render() {
         const url = 'http://localhost:8000';
         return (
-          <FetchAPI apiUrl={url} />
+          <div>
+            <FetchAPI apiUrl={url} />
+            <NextButton nextButtonText={"Next Dog"} />
+          </div>
         );
     }
 }
@@ -55,6 +58,23 @@ class FetchAPI extends React.Component {
     );
   }
 }
+
+class NextButton extends React.Component {
+  handlePick(e) {
+    console.log('picked...');
+    console.log(e);
+  }
+
+  render() {
+    const buttonText = this.props.nextButtonText;
+    return(
+      <div>
+        <button onClick={this.handlePick}>{buttonText}</button>
+      </div>
+    )
+  }
+}
+
 
 var appRoot = document.getElementById('app');
 ReactDOM.render(<App />, appRoot);
