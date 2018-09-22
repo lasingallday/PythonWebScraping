@@ -1,6 +1,6 @@
 class App extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     };
 
     componentDidMount() {
@@ -12,7 +12,6 @@ class App extends React.Component {
         return (
           <div>
             <FetchAPI apiUrl={url} />
-            <NextButton nextButtonText={"Next Dog"} />
           </div>
         );
     }
@@ -23,10 +22,13 @@ class FetchAPI extends React.Component {
   constructor() {
       super();
 
+      this.handleClick = this.handleClick.bind(this);
+
       this.state = {
-          data: []
+          data: [],
+          counter: 0
       }
-  };
+  }
 
   componentDidMount() {
       fetch(this.props.apiUrl)
@@ -34,50 +36,39 @@ class FetchAPI extends React.Component {
           .then(data => this.setState({data: data}))
   }
 
+  handleClick() {
+    this.setState((prevState) => {
+      return {
+        counter: prevState.counter + 1
+      };
+    });
+  }
+
+
   render() {
     return (
         <div className="container2">
             <div className="container1">
 
-                    {this.state.data.map(function(dog, index) {
-                      return (
-                        <div key={index}>
-                            <h1>{dog.Name}</h1>
-                            <img src={dog.image} />
-                            <p><b>Age: </b> {dog['age:']}</p>
-                            <p><b>Breed: </b> {dog['breed:']}</p>
-                            <p><b>Gender: </b> {dog['gender:']}</p>
-                            <p><b>Adoption Fee: </b> {dog['fee:']}</p>
-                            <p><b>Last Updated: </b> {dog['lastUpdated:']}</p>
-                            <br />
-                            <hr />
-                        </div>
-                      )
-                    })}
-   
+              { this.state && this.state.data && this.state.data[0] &&
+              <div>
+                  <h1>{this.state.data[this.state.counter].Name}</h1>
+                  <img src={this.state.data[this.state.counter].image} />
+                  <p><b>Age: </b> {this.state.data[this.state.counter]['age:']}</p>
+                  <p><b>Breed: </b> {this.state.data[this.state.counter]['breed:']}</p>
+                  <p><b>Gender: </b> {this.state.data[this.state.counter]['gender:']}</p>
+                  <p><b>Adoption Fee: </b> {this.state.data[this.state.counter]['fee:']}</p>
+                  <p><b>Last Updated: </b> {this.state.data[this.state.counter]['lastUpdated:']}</p>
+
+                  <button onClick={this.handleClick}>Next Doggy</button>
+              </div>
+            }
 
             </div>
         </div>
     );
   }
 }
-
-class NextButton extends React.Component {
-  handlePick(e) {
-    console.log('picked...');
-    console.log(e);
-  }
-
-  render() {
-    const buttonText = this.props.nextButtonText;
-    return(
-      <div>
-        <button onClick={this.handlePick}>{buttonText}</button>
-      </div>
-    )
-  }
-}
-
 
 var appRoot = document.getElementById('app');
 ReactDOM.render(<App />, appRoot);
