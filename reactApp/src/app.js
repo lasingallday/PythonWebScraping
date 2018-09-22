@@ -60,7 +60,7 @@ class FetchAPI extends React.Component {
                   <p><b>Adoption Fee: </b> {this.state.data[this.state.counter]['fee:']}</p>
                   <p><b>Last Updated: </b> {this.state.data[this.state.counter]['lastUpdated:']}</p>
 
-                  <button onClick={this.handleClick}>Next Doggy</button>
+                  <button type="button" className="btn btn-primary" onClick={this.handleClick}>Next Doggy</button>
               </div>
             }
 
