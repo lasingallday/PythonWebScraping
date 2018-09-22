@@ -1,15 +1,32 @@
-var app = {
-  title: 'Python Animal Adoption Scraper',
-  subtitle: 'Scraping aint scrapping...'
+class App extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            dogs: []
+        }
+    };
+
+    componentDidMount() {
+        fetch('http://localhost:8000')
+            .then(result => result.json())
+            .then(dogs => this.setState({dogs: dogs}))
+    }
+
+    render() {
+        return (
+            <div className="container2">
+                <div className="container1">
+                    {
+                        this.state.dogs.map(dog => 
+                            <div key={dog.image}><img src={dog.image} /></div>
+                        )
+                    }
+                </div>
+            </div>
+        );
+    }
 }
 
-var template = (
-  <div>
-    <h1>{app.title}</h1>
-    <p>{app.subtitle}</p>
-    <p>Locations: Providence, RI</p>
-  </div>
-);
-
 var appRoot = document.getElementById('app');
-ReactDOM.render(template, appRoot);
+ReactDOM.render(<App />, appRoot);
