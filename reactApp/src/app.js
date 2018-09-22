@@ -22,6 +22,13 @@ class App extends React.Component {
                             <div key={dog.image}>
                                 <h1>{dog.Name}</h1>
                                 <img src={dog.image} />
+                                <p><b>Age: </b> {dog['age:']}</p>
+                                <p><b>Breed: </b> {dog['breed:']}</p>
+                                <p><b>Gender: </b> {dog['gender:']}</p>
+                                <p><b>Adoption Fee: </b> {dog['fee:']}</p>
+                                <p><b>Last Updated: </b> {dog['lastUpdated:']}</p>
+                                <br />
+                                <hr />
                             </div>
                         )
                     }
