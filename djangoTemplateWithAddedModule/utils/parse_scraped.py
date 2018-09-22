@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 
-
 def parse_html(raw_html):
     html = BeautifulSoup(raw_html, 'html.parser')
     pet_info_list = []
@@ -15,8 +14,10 @@ def parse_html(raw_html):
     coat = html.find_all('div', {'id': 'rgtkSearchPetInfoAnimalCoatLength'})
     lastUpdated = html.find_all('div', {'id': 'rgtkSearchPetInfoAnimalUpdatedDate'})
 
+    last_pet_name = len(petName)
+
     # Loop through each item and append to list as a dict using current counter.
-    for counter in range(0, len(petName)):
+    for counter in range(0, last_pet_name):
         pet_info_list.append({
             "Name": (str(petName[counter].text).split('Name: ')[1]).split('*')[0].strip(),
             "image": str(petImage[counter]['src']), 
