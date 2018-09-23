@@ -26,38 +26,31 @@ For yarn:
 npm install -g yarn
 ```
 
-## Setting up live-server:
-```
-yarn global add live-server
-```
-
 ## Installing React dependencies/node_modules:
 In the folder where package.json is located, run:
 ```
 yarn install
 ```
 
-## Installing Babel so can write JSX:
-```
-yarn global add babel-cli@6.24.1
-```
-
-
-## Compiling  code using babel:
-```
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react
-```
-This compiles the src/app.js file to the output file in public/scrips/app.js
-
 ## Watching for changes:(Leave running in background)
 ```
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+yarn run build 
+```
+or
+```
+npm run build
 ```
 
 ## Running the app:
 ```
-lite-server public
+yarn run serve
+
 ```
+or 
+```
+npm run serve
+```
+
 
 ## Open in browser:
 Will load page on 127.0.0.1/8080
