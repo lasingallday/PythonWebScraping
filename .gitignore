@@ -1,5 +1,7 @@
 reactApp/node_modules
 reactApp/public/scripts/*.js
 reactApp/yarn.lock
+reactApp/package-lock.json
 reactApp/.DS_Store
 *.pyc
+reactApp/public/bundle.js
