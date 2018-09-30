@@ -31,6 +31,9 @@ npm install -g yarn
 yarn global add live-server
 ```
 
+## Setting up lite-server:
+sudo npm install -g lite-server
+
 ## Installing React dependencies/node_modules:
 In the folder where package.json is located, run:
 ```
