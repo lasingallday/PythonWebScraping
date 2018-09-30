@@ -50,6 +50,9 @@ yarn global add babel-cli@6.24.1
 sudo npm install -g babel-cli
 ```
 
+### Excellent resource on using npm without sudo:
+https://docs.npmjs.com/getting-started/fixing-npm-permissions
+
 ## Installing babel for linux:
 On linux you need to do:
 ```
