@@ -45,6 +45,17 @@ yarn install
 yarn global add babel-cli@6.24.1
 ```
 
+## Linux install Babel
+```
+sudo npm install -g babel-cli
+```
+
+## Installing babel for linux:
+On linux you need to do:
+```
+sudo apt install openbabel
+```
+
 
 ## Compiling  code using babel:
 ```
