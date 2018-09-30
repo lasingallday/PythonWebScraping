@@ -53,13 +53,6 @@ sudo npm install -g babel-cli
 ### Excellent resource on using npm without sudo:
 https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
-## Installing babel for linux:
-On linux you need to do:
-```
-sudo apt install openbabel
-```
-
-
 ## Compiling  code using babel:
 ```
 babel src/app.js --out-file=public/scripts/app.js --presets=env,react
