@@ -32,25 +32,14 @@ In the folder where package.json is located, run:
 yarn install
 ```
 
-## Watching for changes:(Leave running in background)
+## Watching for changes and building all at once:(Leave running in background)
 ```
-yarn run build 
+yarn run dev-server
 ```
 or
 ```
-npm run build
+npm run dev-server
 ```
-
-## Running the app:
-```
-yarn run serve
-
-```
-or 
-```
-npm run serve
-```
-
 
 ## Open in browser:
 Will load page on 127.0.0.1/8080
