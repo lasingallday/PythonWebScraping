@@ -1,6 +1,30 @@
-$brand-color: blue;
+@import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 
-* {
+/* Can be used for styling the image gallery component */
+.image-gallery-slide {
 
-    color: $brand-color;
+}
+
+.imageGalleryDiv {
+    width: 500px;
+    height: 1000px;
+    margin-left: 50px;
+}
+
+.image-gallery-right-nav {
+    position: absolute;
+    right: -50px;
+    top: 300px;
+    outline: 0;
+}
+
+.image-gallery-left-nav {
+    position: absolute;
+    left: -50px;
+    top: 300px;
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
 }

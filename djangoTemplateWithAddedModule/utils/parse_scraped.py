@@ -20,7 +20,7 @@ def parse_html(raw_html):
     for counter in range(0, last_pet_name):
         pet_info_list.append({
             "Name": (str(petName[counter].text).split('Name: ')[1]).split('*')[0].strip(),
-            "image": str(petImage[counter]['src']), 
+            "original": str(petImage[counter]['src']), 
             "gender:": str(petGender[counter].text).split('Gender: ')[1].strip(),
             "age:": str(petAge[counter].text).split('General Age:')[1].strip(),
             "fee:": str(adoptionFee[counter].text).split('Adoption fee:')[1].strip(),
