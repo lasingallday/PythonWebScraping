@@ -32,6 +32,13 @@ In the folder where package.json is located, run:
 yarn install
 ```
 
+## Manually building a bundle.js file:
+```
+yarn run build
+```
+Default webpack doesn't need bundle.js to work. But if you are deploying to
+production for example, being able to bulild a bundle.js would be useful.
+
 ## Watching for changes and building all at once:(Leave running in background)
 ```
 yarn run dev-server
