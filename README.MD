@@ -19,7 +19,7 @@ python manage.py runserver
 
 Open browser and visit localhost:8000/about
 
-# React/Babel:
+# React/Babel
 ## Make sure you have yarn, node, and npm installed:
 For yarn:
 ```
